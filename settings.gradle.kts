@@ -1,3 +1,3 @@
-rootProject.name = "Movie"
+rootProject.name = "ArcTraining"
 include(":app", ":domain", ":data", ":base")
 
