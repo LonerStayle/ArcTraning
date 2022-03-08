@@ -9,7 +9,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 
-
 private suspend fun <T> Flow<T>.set(value:T){
     when(this){
         is MutableSharedFlow -> emit(value)
@@ -18,10 +17,10 @@ private suspend fun <T> Flow<T>.set(value:T){
 }
 
 @Composable
-fun<T> rememberFlowWithLifecycle(
+fun<T>rememberFlowWithLifecycle(
     flow:Flow<T>,
     lifecycle: Lifecycle = LocalLifecycleOwner.current.lifecycle,
-    minActiveState:Lifecycle.State = Lifecycle.State.STARTED
+    minActiveState:Lifecycle.State =Lifecycle.State.STARTED
 ):Flow<T> = remember(flow,lifecycle){
     flow.flowWithLifecycle(lifecycle, minActiveState)
 }

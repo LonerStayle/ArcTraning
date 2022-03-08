@@ -12,8 +12,7 @@ class AuthenticationInterceptor @Inject constructor() : Interceptor {
             addQueryParameter("api_key", BuildConfig.API_KEY)
             addQueryParameter("api_key", BuildConfig.LANGUAGE)
         }.build().let { orgUrlRequest ->
-            original.newBuilder().apply { url(orgUrlRequest).build() }
-                .method(original.method, original.body)
+            original.newBuilder().apply { url(orgUrlRequest).build() }.method(original.method, original.body)
         }.build()
         return chain.proceed(request)
     }

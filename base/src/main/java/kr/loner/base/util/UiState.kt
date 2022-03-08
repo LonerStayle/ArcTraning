@@ -5,18 +5,20 @@ import androidx.lifecycle.MutableLiveData
 import kotlinx.coroutines.flow.MutableStateFlow
 import java.lang.Exception
 
+
 sealed class UiState<out R> {
     data class Success<out T>(val data: T) : UiState<T>()
     data class Error(val exception: Exception) : UiState<Nothing>()
     object Loading : UiState<Nothing>()
 
     override fun toString(): String {
-        return when (this) {
+        return when(this){
             is Success<*> -> "Success[data=$data]"
             is Error -> "Error[exception=$exception]"
             Loading -> "Loading"
         }
     }
+
 }
 
 val UiState<*>.succeeded
@@ -25,9 +27,10 @@ val UiState<*>.succeeded
 val <T> UiState<T>.data: T?
     get() = (this as? UiState.Success)?.data
 
-fun <T> UiState<T>.successOr(fallback: T): T {
-    return (this as? UiState.Success<T>)?.data ?: fallback
+fun <T> UiState<T>.successOr(fallback:T):T{
+    return (this as? UiState.Success<T>)?.data?:fallback
 }
+
 
 inline fun <reified T> UiState<T>.updateOnSuccess(liveData: MutableLiveData<T>) {
     if (this is UiState.Success) {
