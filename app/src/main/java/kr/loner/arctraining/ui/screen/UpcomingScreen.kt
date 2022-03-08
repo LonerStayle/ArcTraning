@@ -1,10 +1,14 @@
-package com.nanamare.movie.ui.screen
+package kr.loner.arctraining.ui.screen
 
 import androidx.activity.compose.BackHandler
-import androidx.compose.foundation.*
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.*
+import androidx.compose.foundation.lazy.GridCells
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyVerticalGrid
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
@@ -33,17 +37,19 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
+import androidx.paging.compose.items
 import coil.compose.rememberImagePainter
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
-import com.nanamare.base.ui.compose.*
-import com.nanamare.movie.BuildConfig
-import com.nanamare.movie.R
+import kr.loner.arctraining.BuildConfig
+import kr.loner.arctraining.R
+import kr.loner.arctraining.model.Result
 import kr.loner.arctraining.ui.MainActivityViewModel
 import kr.loner.arctraining.ui.NavigationViewModel
 import kr.loner.arctraining.ui.currentViewModel
-import com.nanamare.movie.ui.screen.Mode.*
-import kr.loner.arctraining.ui.screen.LocalScaffoldState
+import kr.loner.arctraining.ui.screen.Mode.NORMAL
+import kr.loner.arctraining.ui.screen.Mode.SEARCH
+import kr.loner.base.ui.compose.*
 
 @Composable
 fun UpcomingScreen(

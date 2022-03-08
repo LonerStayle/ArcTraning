@@ -1,12 +1,12 @@
-package com.nanamare.movie.di
+package kr.loner.arctraining.di
 
-import com.nanamare.data.remote.MovieApi
-import com.nanamare.data.remote.impl.MovieRepositoryImpl
-import com.nanamare.domain.repository.MovieRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kr.loner.data.remote.MovieApi
+import kr.loner.data.remote.impl.MovieRepositoryImpl
+import kr.loner.domain.repository.MovieRepository
 import retrofit2.Retrofit
 import retrofit2.create
 import javax.inject.Named

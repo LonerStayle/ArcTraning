@@ -18,10 +18,6 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.nanamare.movie.ui.*
-import com.nanamare.movie.ui.screen.GenreScreen
-import com.nanamare.movie.ui.screen.TrendingScreen
-import com.nanamare.movie.ui.screen.UpcomingScreen
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.flow.collect
 import kr.loner.arctraining.model.mapper.toVo

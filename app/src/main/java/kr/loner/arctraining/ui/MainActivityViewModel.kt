@@ -3,7 +3,7 @@ package kr.loner.arctraining.ui
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.compositionLocalOf
 import androidx.paging.PagingData
-import com.nanamare.movie.ui.screen.Mode
+import kr.loner.arctraining.ui.screen.Mode
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow

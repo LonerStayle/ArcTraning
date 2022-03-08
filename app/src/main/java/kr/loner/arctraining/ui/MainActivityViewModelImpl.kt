@@ -9,7 +9,7 @@ import androidx.paging.cachedIn
 import kr.loner.arctraining.ui.paging.SearchMoviePagingSource
 import kr.loner.arctraining.ui.paging.TrendingMoviePagingSource
 import kr.loner.arctraining.ui.paging.UpcomingMoviePagingSource
-import com.nanamare.movie.ui.screen.Mode
+import kr.loner.arctraining.ui.screen.Mode
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
@@ -21,7 +21,6 @@ import timber.log.Timber
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
-@OptIn(FlowPreview::class, ExperimentalCoroutinesApi::class)
 @HiltViewModel
 class MainActivityViewModelImpl @Inject constructor(
     private val upcomingMoviePagingSource: UpcomingMoviePagingSource,

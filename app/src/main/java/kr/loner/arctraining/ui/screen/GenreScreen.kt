@@ -1,9 +1,10 @@
-package com.nanamare.movie.ui.screen
+package kr.loner.arctraining.ui.screen
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -14,11 +15,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.nanamare.base.ui.compose.SimpleTopBar
-import com.nanamare.domain.model.GenreModel
+import kr.loner.arctraining.R
 import kr.loner.arctraining.ui.MainActivityViewModel
 import kr.loner.arctraining.ui.NavigationViewModel
 import kr.loner.arctraining.ui.currentViewModel
+import kr.loner.base.ui.compose.SimpleTopBar
+import kr.loner.domain.model.GenreModel
 
 @Composable
 fun GenreScreen(

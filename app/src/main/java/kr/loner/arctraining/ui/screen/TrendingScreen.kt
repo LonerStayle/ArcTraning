@@ -1,4 +1,4 @@
-package com.nanamare.movie.ui.screen
+package kr.loner.arctraining.ui.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -20,11 +20,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
+import androidx.paging.compose.items
 import coil.compose.rememberImagePainter
-import com.nanamare.movie.BuildConfig
+import kr.loner.arctraining.BuildConfig
 import kr.loner.arctraining.ui.MainActivityViewModel
 import kr.loner.arctraining.ui.NavigationViewModel
 import kr.loner.arctraining.ui.currentViewModel
+import kr.loner.arctraining.model.Result
 
 @Composable
 fun TrendingScreen(

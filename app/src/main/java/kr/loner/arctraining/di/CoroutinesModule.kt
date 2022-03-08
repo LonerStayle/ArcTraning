@@ -1,12 +1,12 @@
-package com.nanamare.movie.di
+package kr.loner.arctraining.di
 
-import com.nanamare.domain.di.IoDispatcher
-import com.nanamare.domain.di.MainImmediateDispatcher
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.Dispatchers
+import kr.loner.domain.di.IoDispatcher
+import kr.loner.domain.di.MainImmediateDispatcher
 
 @InstallIn(SingletonComponent::class)
 @Module
